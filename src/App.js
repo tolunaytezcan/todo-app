@@ -1,7 +1,9 @@
+import { Text } from './components/text';
+
 const App = () => {
 	return (
 		<div>
-			<h1>Todo App!</h1>
+			<Text color='secondary' value='Todo App!' />
 		</div>
 	);
 };
