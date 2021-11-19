@@ -10,6 +10,6 @@ export const Text = ({ value, color, style }) => (
 
 Text.propTypes = {
 	value: PropTypes.string.isRequired,
-	color: PropTypes.oneOf(['primary', 'secondary', 'gray', 'white', 'black', 'red']),
+	color: PropTypes.oneOf(['primary', 'secondary', 'gray', 'white', 'black', 'red', 'green']),
 	style: PropTypes.object,
 };
