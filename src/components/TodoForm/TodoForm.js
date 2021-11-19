@@ -11,7 +11,7 @@ const TodoForm = () => {
 
 	const onSave = () => {
 		if (title === '') {
-			alert('Lütfen bir todo giriniz!');
+			alert('The input title is required!');
 			return;
 		}
 
