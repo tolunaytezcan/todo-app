@@ -1,10 +1,19 @@
-import { Text } from './components/text';
+import { useSelector } from 'react-redux';
+
+import TodoList from './components/TodoList/TodoList';
+import TodoForm from './components/TodoForm/TodoForm';
+
+import { Container, HeaderText } from './AppStyle';
 
 const App = () => {
+	const todos = useSelector(state => state.todos);
+
 	return (
-		<div>
-			<Text color='secondary' value='Todo App!' />
-		</div>
+		<Container>
+			<HeaderText>Getir Todo App</HeaderText>
+			<TodoForm />
+			<TodoList todos={todos} />
+		</Container>
 	);
 };
 
