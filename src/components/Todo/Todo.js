@@ -38,8 +38,12 @@ const Todo = ({ todo }) => {
 	};
 
 	const onEdit = () => {
-		dispatch(editTodo({ id, title: editValue, completed }));
-		setEditable(false);
+		if (editValue !== '') {
+			dispatch(editTodo({ id, title: editValue, completed }));
+			setEditable(false);
+		} else {
+			alert('The title field cannot be empty.');
+		}
 	};
 
 	const toggleCompleted = () => {
