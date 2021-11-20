@@ -31,6 +31,7 @@ const TodoForm = () => {
 				name='title'
 				value={title}
 				onKeyPress={enterSubmit}
+				placeholder='Add a new todo and press enter or save button.'
 				onChange={e => setTitle(e.currentTarget.value)}
 			/>
 			<AddButton onClick={onSave}>Save Todo</AddButton>

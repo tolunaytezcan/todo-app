@@ -11,8 +11,12 @@ export const TodoInput = styled.input`
 	border-right: none;
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
-	outline-color: #5d3ebc;
+	outline-color: ${({ theme }) => theme.colors.secondary};
 	outline-width: 1px;
+
+	::placeholder {
+		color: ${({ theme }) => theme.colors.gray};
+	}
 `;
 
 export const AddButton = styled.button`
@@ -20,12 +24,12 @@ export const AddButton = styled.button`
 	border: 1px solid #ccc;
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
-	color: #5d3ebc;
-	background: #ffd300;
-	outline-color: #bbb;
+	color: ${({ theme }) => theme.colors.secondary};
+	background: ${({ theme }) => theme.colors.primary};
+	outline-color: ${({ theme }) => theme.colors.gray};
 	outline-width: 1px;
 	:hover {
-		background: #5d3ebc;
-		color: #ffd300;
+		background: ${({ theme }) => theme.colors.secondary};
+		color: ${({ theme }) => theme.colors.primary};
 	}
 `;
