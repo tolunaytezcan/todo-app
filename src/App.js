@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 
 import TodoList from './components/TodoList/TodoList';
 import TodoForm from './components/TodoForm/TodoForm';
+import { Text } from './components/text';
 
 import { Container, HeaderText } from './AppStyle';
 
@@ -12,7 +13,16 @@ const App = () => {
 		<Container>
 			<HeaderText>Getir Todo App</HeaderText>
 			<TodoForm />
-			<TodoList todos={todos} />
+
+			{todos.length > 0 ? (
+				<TodoList todos={todos} />
+			) : (
+				<Text
+					value='Please add items to your todo list.'
+					color='primary'
+					style={{ marginTop: '70px' }}
+				/>
+			)}
 		</Container>
 	);
 };
