@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { addTodo } from '../../features/todoSlice';
+import { addTodo } from '../../redux/features/todoSlice';
 
 import { InputWrapper, TodoInput, AddButton } from './style';
 
