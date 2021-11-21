@@ -16,7 +16,7 @@ import {
 } from '../../redux/features/todoSlice';
 import { Text } from '../text';
 
-import { TodoItem, LeftWrapper, ListInput } from './style';
+import { TodoItem, LeftWrapper, ListInput, TextContainer } from './style';
 
 const Todo = ({ todo }) => {
 	const dispatch = useDispatch();
@@ -88,13 +88,15 @@ const Todo = ({ todo }) => {
 						checked={completed}
 					/>
 				) : (
-					<Text
-						value={title}
-						color={completed ? 'green' : 'primary'}
-						style={{
-							textDecoration: completed ? 'line-through' : 'none',
-						}}
-					/>
+					<TextContainer onDoubleClick={editMode}>
+						<Text
+							value={title}
+							color={completed ? 'green' : 'primary'}
+							style={{
+								textDecoration: completed ? 'line-through' : 'none',
+							}}
+						/>
+					</TextContainer>
 				)}
 			</LeftWrapper>
 			<div>

@@ -22,12 +22,17 @@ export const LeftWrapper = styled.div`
 
 export const ListInput = styled.input`
 	box-sizing: border-box;
+	border: none;
+	outline: none;
 	width: 450px;
 	background-color: ${({ theme }) => theme.colors.secondary};
-	border: none;
 	border-bottom: 2px solid;
 	border-color: ${props => (props.checked ? '#00FF00' : '#FFD300')};
 	color: ${({ theme }) => theme.colors.white};
 	font-size: 16px;
 	margin: 15px 15px 15px 0;
+`;
+
+export const TextContainer = styled.div`
+	width: 450px;
 `;
