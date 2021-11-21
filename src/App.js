@@ -3,6 +3,7 @@ import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 
 import TodoList from './components/TodoList/TodoList';
 import TodoForm from './components/TodoForm/TodoForm';
+import FilterTodos from './components/FilterTodos/FilterTodos';
 import { Text } from './components/text';
 
 import { getTodos } from './redux/thunk';
@@ -11,7 +12,6 @@ import { Container, HeaderText } from './AppStyle';
 
 const App = () => {
 	const todos = useSelector(state => state.todos.todos, shallowEqual);
-
 	const dispatch = useDispatch();
 
 	useEffect(() => {
@@ -21,9 +21,7 @@ const App = () => {
 	return (
 		<Container>
 			<HeaderText>Getir Todo App</HeaderText>
-
 			<TodoForm />
-
 			{todos.length > 0 ? (
 				<TodoList todos={todos} />
 			) : (
@@ -33,6 +31,7 @@ const App = () => {
 					style={{ marginTop: '70px' }}
 				/>
 			)}
+			<FilterTodos todos={todos} />
 		</Container>
 	);
 };
